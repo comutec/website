@@ -1,0 +1,184 @@
+@import "@fontsource/lexend-deca/700.css";
+@import "@fontsource/manrope/400.css";
+@import "@fontsource/manrope/600.css";
+@import "@fontsource/manrope/700.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-900: #040406;
+  --primary-800: #08080d;
+  --primary-700: #0b0c13;
+  --primary-600: #0f101a;
+  --primary-500: #131420;
+  --primary-400: #181928;
+  --primary-300: #1c1e2f;
+  --primary-200: #212237;
+  --primary-100: #25273e;
+  --primary-50: #282a42;
+
+  --secondary-900: #2a1307;
+  --secondary-800: #54260e;
+  --secondary-700: #7e3a16;
+  --secondary-600: #a84d1d;
+  --secondary-500: #d26024;
+  --secondary-400: #db7f4e;
+  --secondary-300: #e49e78;
+  --secondary-200: #ecbca3;
+  --secondary-100: #f5dbcd;
+  --secondary-50: #faebe2;
+
+  --text-primary: #ffffff;
+
+  --header-h1: 4rem;
+  --header-h2: 2.5rem;
+  --header-h3: 1.5rem;
+  --header-h4: 1.25rem;
+
+  --body-regular: 1rem;
+  --body-bold: 1rem;
+  --body-small: 0.88rem;
+
+  --button-text: 0.75rem;
+  --link-text: 1rem;
+
+  --font-heading: "Lexend Deca", serif;
+  --font-body: "Manrope", sans-serif;
+  --section-padding: 3rem;
+
+  --scroll-border: 0.1px solid rgba(128, 128, 128, 0.2);
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 400;
+  font-size: var(--body-regular);
+  line-height: 140%;
+  color: var(--text-primary);
+  background-color: var(--primary-500);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1140px) {
+  .wrapper {
+    max-width: 100%;
+    padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .wrapper {
+    padding: 0 15px;
+  }
+}
+
+button,
+.btn {
+  outline: none;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: var(--button-text);
+  line-height: 19px;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+}
+
+a,
+input,
+textarea,
+p,
+span,
+select,
+li {
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--header-h1);
+}
+
+h2 {
+  font-size: var(--header-h2);
+}
+
+h3 {
+  font-size: var(--header-h3);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--header-h4);
+}
+
+.text-small {
+  font-size: var(--body-small);
+}
+
+.text-bold {
+  font-weight: 700;
+  font-size: var(--body-bold);
+}
+
+/* width and height */
+::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--primary-100);
+  border-left: var(--scroll-border);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-600);
+  border-left: var(--scroll-border);
+}
