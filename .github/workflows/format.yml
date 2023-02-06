@@ -21,4 +21,4 @@ jobs:
         run: npm ci
 
       - name: Check format
-        run: npm check:format
+        run: npm run check:format
