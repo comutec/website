@@ -1,0 +1,26 @@
+---
+interface Props {
+  text: string;
+  icon?: string;
+}
+
+const { text, icon = "" } = Astro.props;
+---
+
+<button class="btn button">
+  <span>{text}</span>
+  <i class="fa-solid fa-arrow-right"></i>
+  <!-- <span>{text}</span> -->
+</button>
+
+<style>
+  .button {
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    max-width: 8.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+</style>
