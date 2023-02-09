@@ -106,14 +106,15 @@ button,
 .btn {
   outline: none;
   border: none;
-  padding: 1rem 2rem;
-  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
   cursor: pointer;
   font-weight: 700;
   font-size: var(--button-text);
   line-height: 19px;
   letter-spacing: 0.04rem;
   text-transform: uppercase;
+  background-color: var(--secondary-500);
 }
 
 a,
