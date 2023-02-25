@@ -1,0 +1,118 @@
+---
+import Calendar from "./svgs/Calendar.astro";
+import People from "./svgs/People.astro";
+import Rocket from "./svgs/Rocket.astro";
+import Stars from "./svgs/Stars.astro";
+import Student from "./svgs/Student.astro";
+import Table from "./svgs/Table.astro";
+
+const benefits = [
+  {
+    content: "Participar en Eventos de Comutec",
+    icon: Calendar,
+  },
+  {
+    content: "Participar en Cursos y Talleres",
+    icon: Student,
+  },
+  {
+    content: "Formar parte de la Junta Directiva",
+    icon: Table,
+  },
+  {
+    content: "Presentación de Proyectos Comutec",
+    icon: Rocket,
+  },
+  {
+    content: "Apoyo de la Comunidad",
+    icon: People,
+  },
+  {
+    content: "Ser parte del Staff de Comutec",
+    icon: Stars,
+  },
+];
+---
+
+<div class="benefits wrapper">
+  <div class="header">
+    <h2>¿Qué ventajas tienen los miembros?</h2>
+    <p>Participar de la comunidad, te otorga muchos beneficios como:</p>
+  </div>
+
+  <div class="list">
+    {
+      benefits.map((benefit) => (
+        <div class="item">
+          <div class="icon">
+            <benefit.icon />
+          </div>
+          <p>{benefit.content}</p>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .benefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    width: fit-content;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+    width: 14rem;
+  }
+
+  .item .icon {
+    padding: 1rem;
+    background: var(--primary-200);
+    border-radius: 1rem;
+    width: fit-content;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 768px) {
+    
+    .list {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 520px) {
+    .benefits {
+        gap: 1rem;
+    } 
+    .list {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: .25rem;
+    }
+  }
+
+</style>
