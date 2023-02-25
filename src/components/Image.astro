@@ -1,0 +1,15 @@
+---
+interface Props {
+  url: string;
+  description?: string;
+  className?: string;
+}
+
+const {
+  url,
+  description = "Imagen perteneciente a Comutec",
+  className = "",
+} = Astro.props;
+---
+
+<img src={url} alt={description} class={className} loading="lazy" />

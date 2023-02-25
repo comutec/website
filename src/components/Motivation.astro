@@ -1,0 +1,127 @@
+---
+import Button from "./Button.astro";
+import Image from "./Image.astro";
+
+let title = "Motivación y Apoyo Acádemico en la Comunidad";
+let description = `
+    Con el apoyo de los miembros de la comunidad, podrás desarrollarte
+    más con tecnologías  innovadoras. Podrás compartir conocimiento junto
+    a otras personas interesadas en el desarrollo tecnológico en favor de la
+    comunidad. Además podrás participar en eventos o concursos en el cual 
+    puedas demostrar tus habilidades  y destrezas.
+`;
+
+let sizeShape = 13;
+let balls = Array.from({ length: sizeShape * sizeShape });
+---
+
+<div class="wrapper">
+  <div class="motivation">
+    <div class="shape">
+      {balls.map(() => <div class="shape__ball" />)}
+    </div>
+    <div>
+      <Image className={"image"} url="motivaciones.png" />
+    </div>
+    <div class="publication">
+      <h2 class="title">
+        {title}
+      </h2>
+      <p class="description">{description}</p>
+      <Button text="LEER MÁS" />
+      <div class="details">
+        <div class="figure">20+</div>
+        <div class="detail">Proyectos y eventos Desarrollados</div>
+
+        <div class="line"></div>
+
+        <div class="figure">40+</div>
+        <div class="detail">Miembros en la Comunidad</div>
+
+        <div class="line"></div>
+
+        <div class="figure">9+</div>
+        <div class="detail">Años</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style define:vars={{ sizeShape }}>
+  .motivation {
+    display: inline-flex;
+    gap: 5em;
+    padding: 3.5em 4.2em;
+    position: relative;
+    margin: 1em 0;
+  }
+
+  /* ABSOLUTE */
+  .shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--sizeShape), 1fr);
+    gap: 0.94em;
+    z-index: -1;
+    padding: 2em;
+    background: var(--primary-400);
+    border-radius: 1em;
+  }
+
+  .shape__ball {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--secondary-500);
+  }
+
+  /* STATIC */
+  .image {
+    min-width: 400px;
+  }
+
+  .publication {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+  }
+
+  .title {
+    font-size: var(--header-h2);
+    font-weight: 800;
+    line-height: 50px;
+    text-align: left;
+  }
+
+  .description {
+    font-size: var(--body-regular);
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+
+  .details {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    padding-right: 3em;
+  }
+
+  .figure {
+    font-size: var(--header-h3);
+    font-weight: 800;
+  }
+
+  .detail {
+    font-size: var(--body-small);
+    font-weight: 400;
+    line-height: 19.6px;
+  }
+
+  .line {
+    width: 2px;
+    height: 100%;
+    background: white;
+  }
+</style>
