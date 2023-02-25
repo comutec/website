@@ -1,0 +1,50 @@
+---
+import Facebook from "./svgs/Facebook.astro";
+import Instagram from "./svgs/Instagram.astro";
+import Linkedin from "./svgs/Linkedin.astro";
+import Twitter from "./svgs/Twitter.astro";
+---
+
+
+
+<footer>
+    <div class="wrapper">
+        <!-- <a href="/" class="circle">
+            <Facebook />
+        </a> -->
+        <a href="https://www.facebook.com/comutec.pe" class="circle"><Facebook /></a>
+        <a href="/" class="circle"><Twitter /></a>
+        <a href="/" class="circle"><Instagram /></a>
+        <a href="/" class="circle"><Linkedin /></a>
+    </div>
+</footer>
+
+<style>
+    footer{
+        background-color: var(--primary-400);
+        padding: 1.5rem 0rem;
+    }
+
+    footer .wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
+    }
+
+    .circle{
+        background-color: var(--primary-500);
+        width: 48px;
+        height: 48px;
+
+        border-radius: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle:hover{
+        background-color: var(--secondary-500);
+    }
+</style>
